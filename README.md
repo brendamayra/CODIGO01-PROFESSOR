@@ -1,5 +1,49 @@
 # CODIGO01-PROFESSOR
+#define LED0 11
+#define LED1 10
+#define LED2 9
+#define LED3 8
 
+int statusLED = 1;
+
+void firsteffect(const int led, const int status);
+
+
+void setup()
+{    
+  pinMode(LED0, OUTPUT);
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  pinMode(LED3, OUTPUT);
+}
+void loop()
+{
+  firsteffect(LED0, statusLED);
+  firsteffect(LED1, statusLED);
+  firsteffect(LED2, statusLED);
+  firsteffect(LED3, statusLED);
+  
+  if(statusLED == 1)
+  {
+    statusLED = 0;
+  }
+  else
+  {
+    statusLED = 1;
+  }
+}
+
+void firsteffect(const int led, const int status)
+{
+  digitalWrite(led, status);
+  delay(200);
+}
+  
+
+
+
+
+segundo codigo
 #define LED0 11
 #define LED1 10
 #define LED2 9
